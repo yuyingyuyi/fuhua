@@ -2,48 +2,47 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>GitHub Pages YouTube 音樂範例</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>月會音樂播放</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #1c1c1c;
-      color: #fff;
-      text-align: center;
+    /* 基本重置與全螢幕設定 */
+    html, body {
       margin: 0;
-      padding: 50px;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
     }
 
-    h1 {
-      color: #ffeb3b;
-      text-shadow: 0 0 10px #ffeb3b;
+    /* 容器樣式 */
+    #player-container {
+      width: 80%;
+      max-width: 800px;
+      height: 450px;
+      box-shadow: 0 0 20px #ffeb3b;
+      border-radius: 15px;
+      overflow: hidden;
     }
 
     iframe {
+      width: 100%;
+      height: 100%;
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #ffeb3b;
-      width: 560px;
-      height: 315px;
-    }
-
-    @media (max-width: 600px) {
-      iframe {
-        width: 90%;
-        height: 200px;
-      }
     }
   </style>
 </head>
 <body>
-  <h1>🎵 GitHub Pages YouTube 音樂範例 🎵</h1>
-
-  <!-- 內嵌 YouTube 音樂 -->
-  <iframe 
-    src="https://www.youtube.com/embed/FjFU9QHdx1g?autoplay=1&loop=1&playlist=FjFU9QHdx1g"
-    allow="autoplay; encrypted-media" 
-    allowfullscreen>
-  </iframe>
-
-  <p>使用者可以直接播放音樂，並在頁面上觀看 YouTube 播放器。</p>
+  <div id="player-container">
+    <iframe 
+      src="https://www.youtube.com/embed/FjFU9QHdx1g?list=RDFjFU9QHdx1g&autoplay=1&loop=1&playlist=FjFU9QHdx1g&controls=0&modestbranding=1" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
